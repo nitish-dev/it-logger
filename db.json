@@ -1,0 +1,42 @@
+{
+    "logs":[
+        {
+            "id":1,
+            "message":"abc1",
+            "attention":true,
+            "date":"03-09-2019",
+            "tech":"Soumya Biswas"
+        },
+        {
+            "id":2,
+            "message":"abc3",
+            "attention":false,
+            "date":"05-09-2019",
+            "tech":"Deepak Bharti"
+        },
+        {
+            "id":3,
+            "message":"abc3",
+            "attention":true,
+            "date":"08-09-2019",
+            "tech":"Nitish Singh"
+        }
+    ],
+    "techs":[
+        {
+            "id":1,
+            "firstName":"Soumya",
+            "lastName":"Biswas"
+        },
+        {
+            "id":2,
+            "firstName":"Deepak",
+            "lastName":"Bharti"
+        },
+        {
+            "id":3,
+            "firstName":"Nitish",
+            "lastName":"Singh"
+        }
+    ]
+}
