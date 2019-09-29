@@ -22,7 +22,7 @@ const TechListModal =  () => {
         <div className="modal-content">
         <h4>Technician List</h4>
             <ul className="collection">
-                {!loading && techs.map(tech => <TechList id={tech.id} tech={tech} />)}
+                {!loading && techs.map(tech => <TechList key={tech.id} tech={tech} />)}
             </ul>
         </div>
          </div>

@@ -16,7 +16,7 @@ const EditLogs = () => {
     return(
         <div id="edit-log-modal" className="modal">
     <div className="modal-content">
-      <h4>Enter System Log</h4>
+      <h4>Edit System Log</h4>
         <div className="row">
             <div className="input-field">
                 <input type="text" value={message} onChange={e => setMessage(e.target.value)} name="message" />

@@ -6,6 +6,8 @@ import AddLogModal from './components/modal/AddLogModal';
 import EditLogs from './components/modal/EditLogs';
 import AddTechModal from './components/modal/AddTechModal';
 import TechListModal from './components/modal/TechListModal';
+import {Provider} from 'react-redux';
+import store from './store';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
       M.AutoInit();
     });
   return (
+    <Provider store={store}>
     <Fragment>
       <AddBtn />
       <AddLogModal />
@@ -26,6 +29,7 @@ const App = () => {
       </div>
       
     </Fragment>
+    </Provider>
   );
 }
 

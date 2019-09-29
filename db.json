@@ -1,42 +1,18 @@
 {
-    "logs":[
-        {
-            "id":1,
-            "message":"abc1",
-            "attention":true,
-            "date":"03-09-2019",
-            "tech":"Soumya Biswas"
-        },
-        {
-            "id":2,
-            "message":"abc3",
-            "attention":false,
-            "date":"05-09-2019",
-            "tech":"Deepak Bharti"
-        },
-        {
-            "id":3,
-            "message":"abc3",
-            "attention":true,
-            "date":"08-09-2019",
-            "tech":"Nitish Singh"
-        }
-    ],
-    "techs":[
-        {
-            "id":1,
-            "firstName":"Soumya",
-            "lastName":"Biswas"
-        },
-        {
-            "id":2,
-            "firstName":"Deepak",
-            "lastName":"Bharti"
-        },
-        {
-            "id":3,
-            "firstName":"Nitish",
-            "lastName":"Singh"
-        }
-    ]
+  "logs": [
+    {
+      "message": "need to format nitish macbook pro 007",
+      "attention": false,
+      "tech": "Deepak Bharti",
+      "id": 1
+    },
+    {
+      "message": "change hard disk of deepak macbook pro 001",
+      "attention": true,
+      "tech": "Soumya Biswas",
+      "date": "2019-09-29T17:17:10.469Z",
+      "id": 2
+    }
+  ],
+  "techs": []
 }

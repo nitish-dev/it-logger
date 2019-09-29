@@ -1,0 +1,5 @@
+export const GET_LOGS = 'GET_LOGS';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_CURRENT = 'SET_CURRENT';
+export const LOGS_ERROR = 'LOGS_ERROR';
+export const ADD_LOG = 'ADD_LOG';
