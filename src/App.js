@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 import store from './store';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
+
 const App = () => {
     useEffect(() => {
       //Init Materialize JS

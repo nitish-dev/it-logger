@@ -1,11 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {deleteTech} from '../../actions/techAction';
 
-const TechList = ({tech}) => {
+const TechList = ({tech:{firstName, lastName, id}, deleteTech}) => {
+
+    const onClick = () => {
+        deleteTech(id);
+    }
     return (
         <li className="collection-item">
             <div>
-                {tech.firstName} {tech.lastName}
-                <a href="#!" className="secondary-content">
+                {firstName} {lastName}
+                <a href="#!" onClick={onClick} className="secondary-content">
                 <i className="material-icons grey-text">delete</i>
             </a>
             </div>
@@ -13,4 +19,4 @@ const TechList = ({tech}) => {
     )
 }
 
-export default TechList;
+export default connect(null, {deleteTech})(TechList);

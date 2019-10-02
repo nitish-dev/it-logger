@@ -1,18 +1,74 @@
 {
   "logs": [
     {
-      "message": "need to format nitish macbook pro 007",
+      "id": 1,
+      "message": "formated nitish macbook pro 003",
       "attention": false,
-      "tech": "Deepak Bharti",
+      "tech": "Soumya Biswas",
+      "date": "2019-10-01T09:11:05.192Z"
+    },
+    {
+      "id": 2,
+      "message": "changed hard disk of deepak macbook pro 008",
+      "attention": false,
+      "tech": "Nitish Singh",
+      "date": "2019-10-01T09:13:26.287Z"
+    },
+    {
+      "message": "Buy new mackbook pro",
+      "attention": false,
+      "tech": "Soumya Biswas",
+      "date": "2019-10-01T04:17:28.714Z",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "message": "hard disk crashed 005",
+      "attention": true,
+      "tech": "Manisha Rao",
+      "date": "2019-10-02T06:46:56.492Z"
+    }
+  ],
+  "techs": [
+    {
+      "firstName": "Ram",
+      "lastName": "Kumar",
       "id": 1
     },
     {
-      "message": "change hard disk of deepak macbook pro 001",
-      "attention": true,
-      "tech": "Soumya Biswas",
-      "date": "2019-09-29T17:17:10.469Z",
+      "firstName": "Nitish",
+      "lastName": "Kumar",
       "id": 2
+    },
+    {
+      "firstName": "Vikas",
+      "lastName": "Kumar",
+      "id": 5
+    },
+    {
+      "firstName": "Rishi",
+      "lastName": "Kapor",
+      "id": 6
+    },
+    {
+      "firstName": "Rishi",
+      "lastName": "Singh",
+      "id": 9
+    },
+    {
+      "firstName": "Rishi",
+      "lastName": "Kumar",
+      "id": 10
+    },
+    {
+      "firstName": "Satish",
+      "lastName": "Prasad",
+      "id": 11
+    },
+    {
+      "firstName": "Nitish",
+      "lastName": "Sarkar",
+      "id": 12
     }
-  ],
-  "techs": []
+  ]
 }

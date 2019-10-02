@@ -1,12 +1,19 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {connect} from 'react-redux';
 import {addLog} from '../../actions/logAction';
+import {getTech} from '../../actions/techAction';
+import SelectTech from '../modal/SelectTech';
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddLogModal = ({addLog}) => {
+const AddLogModal = ({tech:{techs},addLog,getTech}) => {
     const [message, setMessage] = useState('');
     const [attention, setAttention] = useState(false);
     const [tech, setTech] = useState('');
+
+    //get tech
+    useEffect(() => {
+        getTech();
+    },[]);
 
     const onSubmit = () => {
         if(message === '' || tech ===''){
@@ -20,6 +27,11 @@ const AddLogModal = ({addLog}) => {
             }
             addLog(newLogs);
             M.toast({html:`logs added be ${tech}`});
+
+            //Clear field after submit
+            setMessage('');
+            setTech('');
+            setAttention('');
         }
     }
     return(
@@ -36,9 +48,7 @@ const AddLogModal = ({addLog}) => {
             <div className="input-field">
                 <select name="tech" value={tech} onChange={e => setTech(e.target.value)} className="browser-default">
                     <option value='' disabled>Select Technician</option>
-                    <option value='Nitish Singh'>Nitish Singh</option>
-                    <option value='Deepak Bharti'>Deepak Bharti</option>
-                    <option value='Soumya Biswas'>Soumya Biswas</option>
+                    {techs !== null && techs.map(tech => <SelectTech key={tech.id} tech={tech} />)}
                 </select>
             </div>
         </div>
@@ -60,5 +70,7 @@ const AddLogModal = ({addLog}) => {
   </div>
     )
 }
-
-export default connect(null, {addLog})(AddLogModal); 
+const mapStateToProps = state => ({
+    tech:state.tech
+})
+export default connect(mapStateToProps, {addLog,getTech})(AddLogModal); 
