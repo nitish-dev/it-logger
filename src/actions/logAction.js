@@ -1,6 +1,15 @@
 
 
-import {GET_LOGS,SET_LOADING,LOGS_ERROR,ADD_LOG,DELETE_LOG,SET_CURRENT,CLEAR_CURRENT,UPDATE_LOG} from './types';
+import {
+    GET_LOGS,
+    SET_LOADING,
+    LOGS_ERROR,
+    ADD_LOG,
+    SEARCH_LOG,
+    DELETE_LOG,
+    SET_CURRENT,
+    CLEAR_CURRENT,
+    UPDATE_LOG} from './types';
 
 
 // Get logs from server
@@ -108,6 +117,28 @@ export const deleteLog = (id) => async dispatch => {
     
 }
 }
+
+//Search log
+
+export const searchLogs = (text) => async dispatch => {
+    try{
+        setLoading();
+        const res = await fetch(`http://localhost:5000/logs?q=${text}`);
+        const data = await res.json();
+
+        dispatch({
+            type:SEARCH_LOG,
+            payload:data
+        })
+    }
+    catch(err){
+        dispatch({
+            type:LOGS_ERROR,
+            payload:err.response.data
+        })
+    }
+}
+
 //Set loading to true
 export const setLoading = () => {
     return{

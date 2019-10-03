@@ -52,7 +52,7 @@ export const addTech = (tech) => async dispatch => {
 //delete techs from server
 export const deleteTech = id => async dispatch => {
     try{
-        const res = await fetch(`http://localhost:5000/techs/${id}`, {
+      await fetch(`http://localhost:5000/techs/${id}`, {
             method:'DELETE'
         })
        
